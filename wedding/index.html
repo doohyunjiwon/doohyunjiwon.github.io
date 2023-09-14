@@ -1,9 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>배포 테스트</title>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>지원과 두현의 결혼식에 초대합니다</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <img src="./images/01.png" class="image" alt="Image 01" />
+      <img src="./images/02.png" class="image" alt="Image 02" />
+      <img src="./images/03.png" class="image" alt="Image 03" />
+      <div
+        class="swiper-title"
+        style="background-image: url('./images/text_01.png')"
+      >
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" ><img src="./images/swiper_01.png" /></div>
+          <div class="swiper-slide" ><img src="./images/swiper_02.png" /></div>
+          <div class="swiper-slide" ><img src="./images/swiper_03.png" /></div>
+          <div class="swiper-slide" ><img src="./images/swiper_04.png" /></div>
+          <div class="swiper-slide" ><img src="./images/swiper_05.png" /></div>
+          <div class="swiper-slide" ><img src="./images/swiper_06.png" /></div>
+          <div class="swiper-slide" ><img src="./images/swiper_07.png" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <img src="./images/04.png" class="image" alt="Image 04" />
+      <img src="./images/05.png" class="image" alt="Image 05" />
+      <div class="bank-account-container">
+        <img src="./images/06.png" class="image" alt="Image 06" />
+        <div class="button-container">
+          <button
+            class="button"
+            style="background-image: url('./images/button_01.png')"
+            onclick="openDialog('dialog1')"
+          ></button>
+          <button
+            class="button"
+            style="background-image: url('./images/button_02.png')"
+            onclick="openDialog('dialog2')"
+          ></button>
+        </div>
+      </div>
+      <dialog id="dialog1">
+        <button
+          class="close-button"
+          onclick="document.getElementById('dialog1').close()"
+        ></button>
+        <p class="dialog-title">신랑측 계좌번호</p>
+        <div class="dialog-content-container">
+          <div class="flex-container">
+            <div class="bank-detail-container">
+              <span class="info1">농협은행</span>
+              <span class="info1">예금주: 정기윤</span>
+            </div>
+            <div class="copy-button-container">
+              <p class="number">325-01-118436</p>
+              <button class="copy-button" data-account="325-01-118436">
+                복사
+              </button>
+            </div>
+            <p class="copy-notification" data-account="325-01-118436"></p>
+          </div>
+          <div class="flex-container">
+            <div class="bank-detail-container">
+              <span class="info1">하나은행</span>
+              <span class="info1">예금주: 조미경</span>
+            </div>
+            <div class="copy-button-container">
+              <p class="number">278-811345-21207</p>
+              <button class="copy-button" data-account="278-811345-21207">
+                복사
+              </button>
+            </div>
+            <p class="copy-notification" data-account="278-811345-21207"></p>
+          </div>
+          <div class="flex-container">
+            <div class="bank-detail-container">
+              <span class="info1">우리은행</span>
+              <span class="info1">예금주: 정두현</span>
+            </div>
+            <div class="copy-button-container">
+              <p class="number">1002-038-980214</p>
+              <button class="copy-button" data-account="1002-038-980214">
+                복사
+              </button>
+            </div>
+            <p class="copy-notification" data-account="1002-038-980214"></p>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="dialog2">
+        <button
+          class="close-button"
+          onclick="document.getElementById('dialog2').close()"
+        ></button>
+        <p class="dialog-title">신부측 계좌번호</p>
+        <div class="dialog-content-container">
+          <div class="flex-container">
+            <div class="bank-detail-container">
+              <span class="info1">하나은행</span>
+              <span class="info1">예금주: 박상규</span>
+            </div>
+            <div class="copy-button-container">
+              <p class="number">106-13-11191-9</p>
+              <button class="copy-button" data-account="106-13-11191-9">
+                복사
+              </button>
+            </div>
+            <p class="copy-notification" data-account="106-13-11191-9"></p>
+          </div>
+          <div class="flex-container">
+            <div class="bank-detail-container">
+              <span class="info1">국민은행</span>
+              <span class="info1">예금주: 홍연경</span>
+            </div>
+            <div class="copy-button-container">
+              <p class="number">161-21-0142-968</p>
+              <button class="copy-button" data-account="161-21-0142-968">
+                복사
+              </button>
+            </div>
+            <p class="copy-notification" data-account="161-21-0142-968"></p>
+          </div>
+          <div class="flex-container">
+            <div class="bank-detail-container">
+              <span class="info1">국민은행</span>
+              <span class="info1">예금주: 박지원</span>
+            </div>
+            <div class="copy-button-container">
+              <p class="number">096302-04-095472</p>
+              <button class="copy-button" data-account="096302-04-095472">
+                복사
+              </button>
+            </div>
+            <p class="copy-notification" data-account="096302-04-095472"></p>
+          </div>
+        </div>
+      </dialog>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs";
+
+      const swiper = new Swiper(".swiper", {
+        spaceBetween: 20,
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      const openDialog = (dialogId) => {
+        const dialog = document.getElementById(dialogId);
+        dialog.showModal();
+      };
+
+      window.openDialog = openDialog;
+
+      let isCopied = false;
+
+      const copyToClipboard = (text, notifElement) => {
+          if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+              navigator.clipboard.writeText(text).then(() => {
+                  console.log("텍스트 복사 성공");
+                  notifElement.textContent = "클립보드에 복사되었습니다";
+                  setTimeout(() => {
+                      notifElement.textContent = "";
+                  }, 1800);
+              }, (err) => {
+                  console.log("텍스트 복사 실패", err);
+              });
+          } else {
+              console.log("클립보드 API를 지원하지 않는 브라우저입니다.");
+          }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+          const copyButtons = document.querySelectorAll(".copy-button");
+          copyButtons.forEach((button) => {
+              button.addEventListener("click", (event) => {
+                  const accountNumber = event.target.getAttribute("data-account");
+                  const notifElement = event.target.parentElement.parentElement.querySelector(".copy-notification");
+                  copyToClipboard(accountNumber, notifElement);
+              });
+          });
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Nanum Myeongjo", serif;
+  font-display: swap;
+}
+
+html,
+body,
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: 10px;
+  font-weight: 400;
+  text-size-adjust: none;
+  background-color: #ebe9e2;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Nanum Myeongjo", serif;
+}
+
+:root {
+  --swiper-pagination-color: #315333;
+  --swiper-pagination-bullet-inactive-color: #dfd7af;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-opacity: 1;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: none;
+  border-radius: 0;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 56rem;
+  background-color: #ebe9e2;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.swiper-title {
+  height: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3.4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.swiper-wrapper {
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+}
+
+.swiper-slide {
+  width: 100%;
+  padding-bottom: 110%;
+}
+
+.swiper-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 11.7px;
+}
+
+.bank-account-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 50%;
+  padding-bottom: 2.6rem;
+}
+
+.button {
+  width: 70%;
+  aspect-ratio: 774 / 178;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.dialog-container {
+  height: 100%;
+  padding: 7% 8% 0 8%;
+}
+
+.dialog-title {
+  margin-bottom: 10%;
+  text-align: center;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #254928;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 7.6%;
+  aspect-ratio: 1 / 1;
+  background-color: transparent;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+
+  background-image: url("./images/close_button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 40rem;
+  aspect-ratio: 1086 / 1404;
+  padding: 12% 2rem 0 2rem;
+  border: none;
+  background-image: url("./images/dialog_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 600px) {
+  dialog {
+    padding: 11% 2rem 0 2rem;
+  }
+}
+@media (min-width: 800px) {
+  dialog {
+    padding: 9% 2rem 0 2rem;
+  }
+}
+@media (min-width: 1100px) {
+  dialog {
+    padding: 7% 2rem 0 2rem;
+  }
+}
+
+dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.dialog-title {
+  margin-bottom: 10%;
+  text-align: center;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #254928;
+}
+
+@media (max-width: 360px) {
+  .dialog-title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 320px) {
+  .dialog-title {
+    font-size: 1.6rem;
+  }
+}
+
+.dialog-content-container {
+  height: 78%;
+}
+
+.bank-detail-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding-left: 1rem;
+}
+
+.info1 {
+  margin-bottom: 0.5rem;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 178.52%;
+  letter-spacing: -0.2px;
+  color: #254928;
+}
+
+.number {
+  height: 100%;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #254928;
+}
+
+.copy-button {
+  height: 4rem;
+  padding: 0.4rem 1.8rem;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #254928;
+  color: white;
+}
+
+.copy-notification {
+  padding-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  text-align: end;
+  height: 2rem;
+  color: #00aaff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Courier New", Courier, monospace;
+}
